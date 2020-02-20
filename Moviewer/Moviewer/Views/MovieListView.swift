@@ -25,6 +25,7 @@ struct MovieListView: View {
             }
         }
         .onAppear {
+            UITableView.appearance().separatorStyle = .none
             if let moviesArray = self.moviesList.list.movies {
                 if moviesArray.isEmpty {
                     self.moviesList.reload()
