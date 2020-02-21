@@ -11,6 +11,12 @@
 		846F0D7223FDEFCE00796031 /* MovieRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F0D7123FDEFCE00796031 /* MovieRootView.swift */; };
 		846F0D7423FE1E4000796031 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F0D7323FE1E4000796031 /* ImageLoader.swift */; };
 		846F0D7623FE200700796031 /* ImagePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F0D7523FE200700796031 /* ImagePath.swift */; };
+		846F0D7823FF642F00796031 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F0D7723FF642F00796031 /* Genre.swift */; };
+		846F0D7A23FF64E600796031 /* GenreList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F0D7923FF64E600796031 /* GenreList.swift */; };
+		846F0D7C23FF65E600796031 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F0D7B23FF65E600796031 /* NetworkHelper.swift */; };
+		846F0D7E23FF666D00796031 /* GenresService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F0D7D23FF666D00796031 /* GenresService.swift */; };
+		846F0D8023FF674100796031 /* GenresList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F0D7F23FF674100796031 /* GenresList.swift */; };
+		846F0D8223FF6D3D00796031 /* MoviewerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F0D8123FF6D3D00796031 /* MoviewerHelper.swift */; };
 		84D67ABB23FCBD880051D7D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D67ABA23FCBD880051D7D5 /* AppDelegate.swift */; };
 		84D67ABD23FCBD880051D7D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D67ABC23FCBD880051D7D5 /* SceneDelegate.swift */; };
 		84D67AC123FCBD8D0051D7D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84D67AC023FCBD8D0051D7D5 /* Assets.xcassets */; };
@@ -42,6 +48,12 @@
 		846F0D7123FDEFCE00796031 /* MovieRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRootView.swift; sourceTree = "<group>"; };
 		846F0D7323FE1E4000796031 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		846F0D7523FE200700796031 /* ImagePath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePath.swift; sourceTree = "<group>"; };
+		846F0D7723FF642F00796031 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
+		846F0D7923FF64E600796031 /* GenreList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreList.swift; sourceTree = "<group>"; };
+		846F0D7B23FF65E600796031 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		846F0D7D23FF666D00796031 /* GenresService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresService.swift; sourceTree = "<group>"; };
+		846F0D7F23FF674100796031 /* GenresList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresList.swift; sourceTree = "<group>"; };
+		846F0D8123FF6D3D00796031 /* MoviewerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviewerHelper.swift; sourceTree = "<group>"; };
 		84D67AB723FCBD880051D7D5 /* Moviewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moviewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D67ABA23FCBD880051D7D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84D67ABC23FCBD880051D7D5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +119,7 @@
 				84D67ADF23FCCB160051D7D5 /* Services */,
 				84D67ABA23FCBD880051D7D5 /* AppDelegate.swift */,
 				84D67ABC23FCBD880051D7D5 /* SceneDelegate.swift */,
+				846F0D8123FF6D3D00796031 /* MoviewerHelper.swift */,
 				84D67AE623FCCF0C0051D7D5 /* Constants.swift */,
 				84D67AC023FCBD8D0051D7D5 /* Assets.xcassets */,
 				84D67AC523FCBD8D0051D7D5 /* LaunchScreen.storyboard */,
@@ -147,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				84D67AEE23FDDD4F0051D7D5 /* MoviesList.swift */,
+				846F0D7F23FF674100796031 /* GenresList.swift */,
 				846F0D7323FE1E4000796031 /* ImageLoader.swift */,
 			);
 			path = ViewModels;
@@ -157,6 +171,8 @@
 			children = (
 				84D67AEA23FDD5140051D7D5 /* MovieList.swift */,
 				84D67AEC23FDD6420051D7D5 /* Movie.swift */,
+				846F0D7923FF64E600796031 /* GenreList.swift */,
+				846F0D7723FF642F00796031 /* Genre.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -165,7 +181,9 @@
 			isa = PBXGroup;
 			children = (
 				84D67AE823FCD10F0051D7D5 /* MoviesService.swift */,
+				846F0D7D23FF666D00796031 /* GenresService.swift */,
 				84D67AE023FCCB920051D7D5 /* NetworkError.swift */,
+				846F0D7B23FF65E600796031 /* NetworkHelper.swift */,
 				84D67AE223FCCBC90051D7D5 /* Endpoint.swift */,
 				846F0D7523FE200700796031 /* ImagePath.swift */,
 			);
@@ -280,8 +298,14 @@
 				84D67AED23FDD6420051D7D5 /* Movie.swift in Sources */,
 				846F0D7023FDED7100796031 /* MovieRowView.swift in Sources */,
 				84D67ABD23FCBD880051D7D5 /* SceneDelegate.swift in Sources */,
+				846F0D8023FF674100796031 /* GenresList.swift in Sources */,
+				846F0D7A23FF64E600796031 /* GenreList.swift in Sources */,
+				846F0D8223FF6D3D00796031 /* MoviewerHelper.swift in Sources */,
 				84D67AE923FCD10F0051D7D5 /* MoviesService.swift in Sources */,
+				846F0D7E23FF666D00796031 /* GenresService.swift in Sources */,
 				84D67AE323FCCBC90051D7D5 /* Endpoint.swift in Sources */,
+				846F0D7C23FF65E600796031 /* NetworkHelper.swift in Sources */,
+				846F0D7823FF642F00796031 /* Genre.swift in Sources */,
 				84D67AEB23FDD5140051D7D5 /* MovieList.swift in Sources */,
 				846F0D7623FE200700796031 /* ImagePath.swift in Sources */,
 				84D67AEF23FDDD4F0051D7D5 /* MoviesList.swift in Sources */,

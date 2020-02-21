@@ -11,6 +11,8 @@ import SwiftUI
 struct MovieRowView: View {
     
     var movie: Movie
+    var genreList: GenreList
+    
     @ObservedObject var imageLoader: ImageLoader = ImageLoader()
     
     var body: some View {
@@ -29,7 +31,11 @@ struct MovieRowView: View {
                     .font(.headline)
                     .foregroundColor(Color.white)
                     .lineLimit(1)
-                Text("\(movie.voteAverage)")
+                Text("\(MoviewerHelper.getGenresLabel(for: movie.genres, list: genreList))")
+                    .font(.subheadline)
+                    .foregroundColor(Color.white)
+                    .lineLimit(1)
+                Text("\(movie.releaseDateTextFormatted)")
                     .font(.subheadline)
                     .foregroundColor(Color.white)
                     .lineLimit(1)
@@ -44,8 +50,8 @@ struct MovieRowView: View {
         .padding(EdgeInsets.init(top: 8, leading: 0, bottom: 8, trailing: 0))
         .frame(height: 300)
         .onAppear {
-            if let imagePath = self.movie.posterPath {
-                let movieBanner = ImagePath.buildImagePath(withSize: "300", for: imagePath)
+            if let imagePath = self.movie.backdropPath {
+                let movieBanner = ImagePath.buildImagePath(withSize: "500", for: imagePath)
                 if let url = movieBanner.url {
                     self.imageLoader.downloadImage(url: url)
                 }

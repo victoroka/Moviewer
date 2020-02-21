@@ -1,19 +1,19 @@
 //
-//  MoviesService.swift
+//  GenresService.swift
 //  Moviewer
 //
-//  Created by Victor Oka on 18/02/20.
+//  Created by Victor Oka on 20/02/20.
 //  Copyright © 2020 Victor Oka. All rights reserved.
 //
 
 import Foundation
 
-class MoviesService {
+class GenresService {
     
-    static let shared = MoviesService()
+    static let shared = GenresService()
     let session: URLSession = URLSession(configuration: .default)
     
-    func fetchMovies(_ endpoint: Endpoint, completion: @escaping (Result<MovieList, NetworkError>) -> Void) {
+    func fetchGenres(_ endpoint: Endpoint, completion: @escaping (Result<GenreList, NetworkError>) -> Void) {
         
         guard let url = endpoint.url else {
             completion(.failure(.badUrl))
@@ -29,8 +29,8 @@ class MoviesService {
             let statusCode = (response as? HTTPURLResponse)?.statusCode ?? 0
             if 200...299 ~= statusCode {
                 do {
-                    let decodedMovieList = try JSONDecoder().decode(MovieList.self, from: data!)
-                    completion(.success(decodedMovieList))
+                    let decodedGenreList = try JSONDecoder().decode(GenreList.self, from: data!)
+                    completion(.success(decodedGenreList))
                 } catch {
                     completion(.failure(.mappingError))
                 }
@@ -39,5 +39,4 @@ class MoviesService {
         })
         task.resume()
     }
-    
 }

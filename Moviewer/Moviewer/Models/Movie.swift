@@ -43,6 +43,16 @@ class Movie: Codable {
         case isAdult = "adult"
     }
     
+    static let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/YYYY"
+        return formatter
+    }()
+    
+    var releaseDateTextFormatted: String {
+        return Movie.dateFormatter.string(from: stringToDate(stringDate: releaseDate))
+    }
+    
     init(id: Int, title: String, originalTitle: String, originalLanguage: String, overview: String, releaseDate: String, genres: [Int], posterPath: String, backdropPath: String, popularity: Double, voteCount: Int, voteAverage: Double, hasVideo: Bool, isAdult: Bool) {
         self.id = id
         self.title = title
@@ -58,6 +68,13 @@ class Movie: Codable {
         self.voteAverage = voteAverage
         self.hasVideo = hasVideo
         self.isAdult = isAdult
+    }
+    
+    private func stringToDate(stringDate: String) -> Date {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy'-'MM'-'dd"
+        guard let date = dateFormatter.date(from: stringDate) else { return Date() }
+        return date
     }
 }
 

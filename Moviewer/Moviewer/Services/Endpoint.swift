@@ -34,4 +34,14 @@ struct Endpoint {
         ])
     }
     
+    // MARK: - Build URL to fetch movie genres
+    static func buildMovieGenresURL(language: String = "en-US") -> Endpoint {
+        Endpoint(
+            path: "/3/genre/movie/list",
+            queryItems: [
+                URLQueryItem(name: "api_key", value: "\(Constants.API_KEY)"),
+                URLQueryItem(name: "language", value: "\(language)"),
+        ])
+    }
+    
 }
