@@ -11,13 +11,17 @@ import Foundation
 class MoviewerHelper {
     
     static func getGenresLabel(for ids: [Int], list: GenreList) -> String {
+        
         var genresLabel: String = ""
         for genre in list.genres {
             if ids.contains(genre.id) {
-                genresLabel += "\(genre.name) "
+                genresLabel += "\(genre.name) | "
             }
         }
-        return genresLabel
+        
+        let offsetIndex = genresLabel.count-3
+        return genresLabel[0...offsetIndex]
+        
     }
     
 }

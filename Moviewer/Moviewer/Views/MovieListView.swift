@@ -20,10 +20,13 @@ struct MovieListView: View {
                     Text("loading...")
                 } else {
                     List(self.moviesList.list.movies ?? [], id: \.id) { movie in
-                        MovieRowView(movie: movie, genreList: self.genresList.list)
+                        NavigationLink(destination: MovieDetailView(movie: movie, genreList: self.genresList.list)) {
+                            MovieRowView(movie: movie, genreList: self.genresList.list)
+                        }
                     }
                 }
             }
+            .navigationBarTitle("Upcoming")
         }
         .onAppear {
             UITableView.appearance().separatorStyle = .none
