@@ -9,7 +9,7 @@
 
 <p align="center">
     <img src="screenshots/home_screen.png" width="250" max-width="40%" alt="home screen screenshot" />
-    <img src="screenshots/detail_screen.png" width="275" max-width="40%" alt="detail screen screenshot" />
+    <img src="screenshots/detail_screen.png" width="260" max-width="40%" alt="detail screen screenshot" />
 </p>
 
 ## Prerequisites

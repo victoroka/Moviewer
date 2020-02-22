@@ -96,6 +96,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		846F0D872401AB5500796031 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				846F0D8123FF6D3D00796031 /* MoviewerHelper.swift */,
+				84D67AE623FCCF0C0051D7D5 /* Constants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		846F0D882401AB8100796031 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				846F0D8323FF788D00796031 /* StringExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		84D67AAE23FCBD880051D7D5 = {
 			isa = PBXGroup;
 			children = (
@@ -121,11 +138,10 @@
 				84D67ADD23FCCAF00051D7D5 /* ViewModels */,
 				84D67ADE23FCCB060051D7D5 /* Models */,
 				84D67ADF23FCCB160051D7D5 /* Services */,
+				846F0D872401AB5500796031 /* Helpers */,
+				846F0D882401AB8100796031 /* Extensions */,
 				84D67ABA23FCBD880051D7D5 /* AppDelegate.swift */,
 				84D67ABC23FCBD880051D7D5 /* SceneDelegate.swift */,
-				846F0D8323FF788D00796031 /* StringExtension.swift */,
-				846F0D8123FF6D3D00796031 /* MoviewerHelper.swift */,
-				84D67AE623FCCF0C0051D7D5 /* Constants.swift */,
 				84D67AC023FCBD8D0051D7D5 /* Assets.xcassets */,
 				84D67AC523FCBD8D0051D7D5 /* LaunchScreen.storyboard */,
 				84D67AC823FCBD8D0051D7D5 /* Info.plist */,
