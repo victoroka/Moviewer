@@ -17,7 +17,7 @@ struct MovieListView: View {
         NavigationView {
             Group {
                 if moviesList.isLoading {
-                    Text("loading...")
+                    Text("Loading...")
                 } else {
                     List(self.moviesList.list.movies ?? [], id: \.id) { movie in
                         NavigationLink(destination: MovieDetailView(movie: movie, genreList: self.genresList.list)) {
